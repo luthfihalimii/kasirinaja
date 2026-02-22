@@ -1,0 +1,5 @@
+.gocache/
+*.log
+backend/*.log
+backend/.env
+frontend/.env*

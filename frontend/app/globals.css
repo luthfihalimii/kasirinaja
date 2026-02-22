@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --c-bg: #f5efe3;
+  --c-panel: #fffaf2;
+  --c-panel-soft: #f7efdf;
+  --c-border: #d8c7a6;
+  --c-title: #1f1a14;
+  --c-text: #3b3023;
+  --c-text-muted: #725f47;
+  --c-accent: #f5b938;
+  --c-ink: #2d2418;
+  --c-orb-a: rgba(237, 185, 82, 0.36);
+  --c-orb-b: rgba(76, 153, 197, 0.22);
+}
+
+@theme inline {
+  --color-background: var(--c-bg);
+  --color-foreground: var(--c-title);
+  --font-sans: var(--font-sans), "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--c-bg);
+  color: var(--c-title);
+  font-family: var(--font-sans), "Trebuchet MS", "Segoe UI", sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.font-display {
+  font-family: var(--font-display), "Impact", "Haettenschweiler", sans-serif;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--c-accent), white 40%);
+  color: #1f1a14;
+}

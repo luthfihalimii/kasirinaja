@@ -1,0 +1,34 @@
+version: 2
+updates:
+  # Go modules
+  - package-ecosystem: "gomod"
+    directory: "/backend"
+    schedule:
+      interval: "weekly"
+    groups:
+      go-dependencies:
+        patterns: ["*"]
+    labels:
+      - "dependencies"
+      - "go"
+
+  # npm/bun packages
+  - package-ecosystem: "npm"
+    directory: "/frontend"
+    schedule:
+      interval: "weekly"
+    groups:
+      frontend-dependencies:
+        patterns: ["*"]
+    labels:
+      - "dependencies"
+      - "javascript"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    labels:
+      - "dependencies"
+      - "github-actions"
